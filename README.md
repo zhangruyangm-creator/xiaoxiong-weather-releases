@@ -9,6 +9,7 @@
 
 | 版本 | 文件 | 大小 |
 |------|------|------|
+| 1.4.4 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.4.4/app-full-release.apk) | 约 12 MB |
 | 1.4.3 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.4.3/app-full-release.apk) | 约 12 MB |
 | 1.4.2 | [天气-release-1.4.2.apk](./天气-release-1.4.2.apk) | 约 12 MB |
 
@@ -16,7 +17,8 @@
 
 | 版本 | 日期 | 主要更新 |
 |------|------|----------|
-| 1.4.3 | 2026-08-07 | 小熊农场作物改用 emoji 展示（成熟作物带呼吸光效）；小熊迷宫选关界面可顺畅上下滚动；小时页折线图支持上下滑动页面，不再被拖选时间卡住 |
+| 1.4.4 | 2026-08-07 | 修复彩蛋口令丢失后的定位模式；积水预警阈值调整为 12 小时；修复通知空码误报；隐私政策同步更新至 1.4.4 |
+| 1.4.3 | 2026-08-07 | 小熊农场作物改用自绘像素风（成熟带呼吸光效）；小熊迷宫选关可顺畅滚动；小时页折线图支持上下滑动页面；迷宫棋盘立体化、出口门开合动画 |
 | 1.4.2 | 2026-08-07 | 隐私政策更新（版本号、更新日期、新增官方下载站入口与联系邮箱）；统一雷达/云图请求的版本号来源 |
 
 > 注：1.4.1 及更早版本的更新内容暂未归档。
