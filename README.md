@@ -9,6 +9,7 @@
 
 | 版本 | 文件 | 大小 |
 |------|------|------|
+| 1.4.5 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.4.5/app-full-release.apk) | 约 12 MB |
 | 1.4.4 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.4.4/app-full-release.apk) | 约 12 MB |
 | 1.4.3 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.4.3/app-full-release.apk) | 约 12 MB |
 | 1.4.2 | [天气-release-1.4.2.apk](./天气-release-1.4.2.apk) | 约 12 MB |
@@ -17,6 +18,7 @@
 
 | 版本 | 日期 | 主要更新 |
 |------|------|----------|
+| 1.4.5 | 2026-08-08 | 接入 CI 自动检查（静态检查/单测/代码扫描）；代码风格全量规范化；修复配置切换时雷达页可能不刷新的问题；发版自动化 |
 | 1.4.4 | 2026-08-07 | 修复彩蛋口令丢失后的定位模式；积水预警阈值调整为 12 小时；修复通知空码误报；隐私政策同步更新至 1.4.4 |
 | 1.4.3 | 2026-08-07 | 小熊农场作物改用自绘像素风（成熟带呼吸光效）；小熊迷宫选关可顺畅滚动；小时页折线图支持上下滑动页面；迷宫棋盘立体化、出口门开合动画 |
 | 1.4.2 | 2026-08-07 | 隐私政策更新（版本号、更新日期、新增官方下载站入口与联系邮箱）；统一雷达/云图请求的版本号来源 |
