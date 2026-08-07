@@ -9,7 +9,6 @@
 
 | 版本 | 文件 | 大小 |
 |------|------|------|
-| 1.4.6 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.4.6/app-full-release.apk) | 约 12 MB |
 | 1.4.7 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.4.7/app-full-release.apk) | 约 12 MB |
 | 1.4.5 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.4.5/app-full-release.apk) | 约 12 MB |
 | 1.4.4 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.4.4/app-full-release.apk) | 约 12 MB |
@@ -20,7 +19,6 @@
 
 | 版本 | 日期 | 主要更新 |
 |------|------|----------|
-| 1.4.6 | 2026-08-08 | 性能优化：跑酷/农场在标题、晴天等静态场景帧率从 60fps 降到约 12fps，省电约 80%；性能优化：收藏/搜索数据流下沉，交互不再触发整个天气页重组；性能优化：天气图标绘制指令缓存，列表滚动更流畅；安装包：移除 x86/x86_64 支持（仅保留 ARM），体积略减 |
 | 1.4.5 | 2026-08-08 | 接入 CI 自动检查（静态检查/单测/代码扫描）；代码风格全量规范化；修复配置切换时雷达页可能不刷新的问题；发版自动化 |
 | 1.4.4 | 2026-08-07 | 修复彩蛋口令丢失后的定位模式；积水预警阈值调整为 12 小时；修复通知空码误报；隐私政策同步更新至 1.4.4 |
 | 1.4.3 | 2026-08-07 | 小熊农场作物改用自绘像素风（成熟带呼吸光效）；小熊迷宫选关可顺畅滚动；小时页折线图支持上下滑动页面；迷宫棋盘立体化、出口门开合动画 |
