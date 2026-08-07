@@ -10,6 +10,7 @@
 | 版本 | 文件 | 大小 |
 |------|------|------|
 | 1.4.6 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.4.6/app-full-release.apk) | 约 12 MB |
+| 1.4.7 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.4.7/app-full-release.apk) | 约 12 MB |
 | 1.4.5 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.4.5/app-full-release.apk) | 约 12 MB |
 | 1.4.4 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.4.4/app-full-release.apk) | 约 12 MB |
 | 1.4.3 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.4.3/app-full-release.apk) | 约 12 MB |
