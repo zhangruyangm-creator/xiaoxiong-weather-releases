@@ -4,14 +4,19 @@
 
 ## 最新版本
 
+> 推荐前往 **GitHub Releases** 页面下载最新安装包：
+> https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/latest
+
 | 版本 | 文件 | 大小 |
 |------|------|------|
+| 1.4.3 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.4.3/app-full-release.apk) | 约 12 MB |
 | 1.4.2 | [天气-release-1.4.2.apk](./天气-release-1.4.2.apk) | 约 12 MB |
 
 ## 版本更新记录
 
 | 版本 | 日期 | 主要更新 |
 |------|------|----------|
+| 1.4.3 | 2026-08-07 | 小熊农场作物改用 emoji 展示（成熟作物带呼吸光效）；小熊迷宫选关界面可顺畅上下滚动；小时页折线图支持上下滑动页面，不再被拖选时间卡住 |
 | 1.4.2 | 2026-08-07 | 隐私政策更新（版本号、更新日期、新增官方下载站入口与联系邮箱）；统一雷达/云图请求的版本号来源 |
 
 > 注：1.4.1 及更早版本的更新内容暂未归档。
