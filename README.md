@@ -9,6 +9,7 @@
 
 | 版本 | 文件 | 大小 |
 |------|------|------|
+| 1.5.3 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.5.3/app-full-release.apk) | 约 12 MB |
 | 1.5.2 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.5.2/app-full-release.apk) | 约 12 MB |
 | 1.5.1 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.5.1/app-full-release.apk) | 约 12 MB |
 | 1.5.0 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.5.0/app-full-release.apk) | 约 12 MB |
@@ -23,6 +24,7 @@
 
 | 版本 | 日期 | 主要更新 |
 |------|------|----------|
+| 1.5.3 | 2026-08-10 | 彩蛋游戏可选编译：`full` 版默认把 4 个小游戏全部编译进去，现可用 `-Pgames=jump,star,maze,farm` 选择要编译的游戏（未选中的游戏源码不进包、口令不可达、对应单测不编译）；`-Pgames=none` 等价 lite 版入口；小时走势图下的小时明细默认折叠，点击后再展开；补齐排行榜、小时页卡片设置、调试字段、小时明细展开/收起的英文翻译，`lintFullDebug` 不再有 `MissingTranslation` 报错；内部重构：卡片设置系统泛化为通用 `CardLayoutModel` + `CardsSettingsScreen`（今天页/小时页共用），游戏共享精灵图、偏好、排行榜状态抽到 gameCommon，为后续新增页面卡片/游戏铺路，行为无变化；构建工具升级：Gradle 8.13 → 8.14.5（KTS 构建脚本 ABI 指纹识别，改脚本时跳过无关重编译） |
 | 1.5.2 | 2026-08-09 | 预警增强：未来强降雨/降雪窗口扩至 24 小时；当前小雨不再吞掉更严重的未来暴雨预警；大雾分档：能见度不足 200 米升为浓雾预警，并新增专属小熊插画；体感严寒预警门槛从 -10°C 调整为 -15°C；桌面图标：雷暴天气下若小时雨强达暴雨/猛烈量级，优先显示红伞/黑伞（比雷暴更稀少） |
 | 1.5.1 | 2026-08-09 | 修复温度符号：全 App 统一为国标/SI 的 °C / °F 写法（此前摄氏度用了预组合 ℃ 字符，在系统字体下渲染偏扁）；未来降雨伞色黑伞阈值从 50mm/h 下调至 32mm/h，与桌面当前天气图标口径一致，更易触发；清空游戏排行榜时同步清零该游戏的最高分纪录 |
 | 1.5.0 | 2026-08-09 | 冻雨/冰雹专属天气效果：冻雨为冷白雨滴+冰晶，冰雹为密集白色冰粒并保留雷暴闪电，三个小游戏通用；雷暴/冰雹天气雨量收敛到中雨量级，突出闪电与冰雹主体，画面不再糊成一片 |
