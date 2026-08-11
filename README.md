@@ -9,6 +9,7 @@
 
 | 版本 | 文件 | 大小 |
 |------|------|------|
+| 1.5.4 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.5.4/app-full-release.apk) | 约 12 MB |
 | 1.5.3 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.5.3/app-full-release.apk) | 约 12 MB |
 | 1.5.2 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.5.2/app-full-release.apk) | 约 12 MB |
 | 1.5.1 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.5.1/app-full-release.apk) | 约 12 MB |
@@ -24,6 +25,7 @@
 
 | 版本 | 日期 | 主要更新 |
 |------|------|----------|
+| 1.5.4 | 2026-08-11 | 小熊生活状态大扩展：新增早餐片刻（23 张中式/西式/阿拉伯式插画）、入睡准备片刻（换睡衣/泡澡/铺床/定闹钟等 9 张）、晚间休闲扩至 20 张（吉他/瑜伽/桌游/乐高/网课/看夜景等）、睡觉插画池扩至 21 张（睡袋/上下铺/宿舍/婴儿床等）、晨练与傍晚锻炼新增 9 项（八段锦/广场舞/空竹/太极剑等）；工作日作息调整：工作时间延长至 7.25 小时（下午工作至 18:00），通勤上下班各 45 分钟，傍晚锻炼与晚间休闲时间重排；新增 12 个职业插画：医生/警察/程序员/飞行员/主播/设计师/木匠/电工/矿工/兽医/摄影师/音乐家；七日页支持卡片设置：可显示/隐藏/排序季节提示、历史天气等模块（与今日页、小时页一致）；新增历史天气查询：七日页底部入口，日历选日查看单日详情（温度、降水、湿度、风力、日出日落）；物候季节修正接入真实积温数据：按当前年份与常年积温差动态推算开花/物候偏移，数据按天缓存、进入七日页才按需拉取，不拖慢主天气加载 |
 | 1.5.3 | 2026-08-10 | 彩蛋游戏可选编译：`full` 版默认把 4 个小游戏全部编译进去，现可用 `-Pgames=jump,star,maze,farm` 选择要编译的游戏（未选中的游戏源码不进包、口令不可达、对应单测不编译）；`-Pgames=none` 等价 lite 版入口；小时走势图下的小时明细默认折叠，点击后再展开；补齐排行榜、小时页卡片设置、调试字段、小时明细展开/收起的英文翻译，`lintFullDebug` 不再有 `MissingTranslation` 报错；内部重构：卡片设置系统泛化为通用 `CardLayoutModel` + `CardsSettingsScreen`（今天页/小时页共用），游戏共享精灵图、偏好、排行榜状态抽到 gameCommon，为后续新增页面卡片/游戏铺路，行为无变化；构建工具升级：Gradle 8.13 → 8.14.5（KTS 构建脚本 ABI 指纹识别，改脚本时跳过无关重编译） |
 | 1.5.2 | 2026-08-09 | 预警增强：未来强降雨/降雪窗口扩至 24 小时；当前小雨不再吞掉更严重的未来暴雨预警；大雾分档：能见度不足 200 米升为浓雾预警，并新增专属小熊插画；体感严寒预警门槛从 -10°C 调整为 -15°C；桌面图标：雷暴天气下若小时雨强达暴雨/猛烈量级，优先显示红伞/黑伞（比雷暴更稀少） |
 | 1.5.1 | 2026-08-09 | 修复温度符号：全 App 统一为国标/SI 的 °C / °F 写法（此前摄氏度用了预组合 ℃ 字符，在系统字体下渲染偏扁）；未来降雨伞色黑伞阈值从 50mm/h 下调至 32mm/h，与桌面当前天气图标口径一致，更易触发；清空游戏排行榜时同步清零该游戏的最高分纪录 |
