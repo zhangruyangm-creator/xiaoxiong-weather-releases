@@ -9,6 +9,7 @@
 
 | 版本 | 文件 | 大小 |
 |------|------|------|
+| 1.5.8 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.5.8/app-full-release.apk) | 约 12 MB |
 | 1.5.7 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.5.7/app-full-release.apk) | 约 12 MB |
 | 1.5.6 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.5.6/app-full-release.apk) | 约 12 MB |
 | 1.5.5 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.5.5/app-full-release.apk) | 约 12 MB |
@@ -28,6 +29,7 @@
 
 | 版本 | 日期 | 主要更新 |
 |------|------|----------|
+| 1.5.8 | 2026-08-12 | 跳跳：恢复标题/结算界面的慢速观感（死亡翻滚、震屏、标题小熊浮动保持原有的 1/5 速度效果） |
 | 1.5.7 | 2026-08-12 | 小游戏修复与打磨（彩蛋游戏） |
 | 1.5.6 | 2026-08-12 | 带伞建议不再因未来 12 小时内的毛毛雨就常年提醒：改为未来 6 小时内有较强降水（≥0.5mm 或概率 ≥70%）才提示「必带伞」，12 小时内的毛毛雨（≥0.2mm 或概率 ≥60%）仅算「可带可不带」；七日页紫外线显示改为「紫外线指数」，普通用户更好理解；性能优化：桌面小组件与后台轮询不再每次刷新都重新定位，10 分钟内复用最近定位结果（省去 GPS 冷启动与逆地理）；雷达帧缓存只在切换城市时清空，刷新不再白清重下；下拉刷新去重：回前台 / 网络恢复 / 整点轮询等静默刷新在 5 秒内同城只拉一次，避免多来源叠加重复请求 |
 | 1.5.5 | 2026-08-11 | 修复切换网络/连 VPN 后刷新失败：监听网络变化并在切换时自动清空连接池死连接，网络恢复后自动静默刷新，不再出现「断网后怎么刷都刷不出来」；雷达回波按网络类型区分加载：Wi-Fi 保持全量预取+自动播放；蜂窝网络只下载底图+最新一帧，点播放才下载其余帧（每次进入雷达页省约一半流量）；雷达播放顺序修正：从最早帧按时间正序播到最新帧（此前最新帧播完会跳回最早帧）；暂停后再次播放从当前帧继续；生活指数修正：空气质量统一为 US AQI 口径（欧洲 EAQI 按污染浓度换算，不再混用两套尺度）；白天紫外线改用当日最大值，避免早晚误报「无需防晒」；穿衣指数在无体感温度时补湿冷修正（高湿低温提示防寒） |
