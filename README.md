@@ -9,6 +9,7 @@
 
 | 版本 | 文件 | 大小 |
 |------|------|------|
+| 1.6.2 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.6.2/app-full-release.apk) | 约 21 MB |
 | 1.6.1 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.6.1/app-full-release.apk) | 约 18 MB |
 | 1.6.0 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.6.0/app-full-release.apk) | 约 18 MB |
 | 1.5.9 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.5.9/app-full-release.apk) | 约 18 MB |
@@ -32,6 +33,7 @@
 
 | 版本 | 日期 | 主要更新 |
 |------|------|----------|
+| 1.6.2 | 2026-08-15 | 桌面小组件·场景化：背景从固定蓝色改为随天气场景渐变（晴/夜/云/阴/雨/雪各一套），与主界面配色统一；桌面小组件·大尺寸：放开拉伸上限，新增 4×3 大卡片与超宽条布局，显示体感/湿度/风速/气压四项指标与 7~8 小时预报；下拉刷新·小熊帧动画：刷新指示器换成小熊专属帧动画（下拉浇水 3 帧、刷新奔跑 4 帧循环），替代系统默认转圈；小游戏·奔跑 8 拍循环：跳跳/摘星/迷宫共用的小熊由「左右迈步两帧」升级为经典 8 拍跑循环（着地/下压/收腿/蹬地×左右），奔跑观感更自然；天气码归一化：雷暴伴小冰雹（码 96）统一归并为雷暴（码 95），历史天气与预报同一标准，避免粗网格模型误报冰雹；预警调优：码 96/95 雷暴降为 WATCH 级提醒（除非有强降雨实据），严重冰雹（码 99）才保留 WARNING；农场·作物图标：20 种此前共用同一图标的作物改为专属卡通图标（一对一映射）；测试工程化：抽公共 ViewModel 测试脚手架，新增定位/历史区间/调试模式三组测试；隐私政策日期更新 |
 | 1.6.1 | 2026-08-14 | 农场·图鉴：点击查看大图详情并补齐 128 种作物介绍；农场·主题：UI 接入 Material 主题与深浅色适配；农场·手感：按压缩放反馈；农场·动效：弹窗滑入弹出；迷宫·无尽：存档续玩、超步失败、退出选择框；难度封顶对应战役 46-60 关 |
 | 1.6.0 | 2026-08-14 | 小熊农场大版本：收获入背包买卖、作物图鉴、新一季周目、需求气泡、商店道具与施肥、昼夜氛围、后期作物平衡；修复启动图标/通知去重/分享位图/历史缓存四处边界问题；农场纯逻辑层与数据层重构，游戏资源按编译选项裁剪 |
 | 1.5.9 | 2026-08-13 | 历史天气：支持选日期区间，查看区间内最高/最低温、最多降水及对应日期，并列出逐日明细；小熊农场大改版：作物成熟图改为卡通插画（土壤干湿、生长阶段、杂草/虫灾覆盖层），不再只靠 emoji；工具栏简化为「照料 / 播种 / 铲除」+「更多」，商店支持分类筛选；桌面图标改为自适应图标（mipmap-anydpi + 单套 webp 前景），去掉多密度 PNG，安装包更轻；桌面小组件预览文案与未使用字符串清理；构建告警与 Kotlin/KTX 小现代化 |
