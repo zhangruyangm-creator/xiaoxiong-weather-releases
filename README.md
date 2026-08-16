@@ -9,6 +9,7 @@
 
 | 版本 | 文件 | 大小 |
 |------|------|------|
+| 1.6.6 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.6.6/app-full-release.apk) | 约 24 MB |
 | 1.6.5 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.6.5/app-full-release.apk) | 约 24 MB |
 | 1.6.4 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.6.4/app-full-release.apk) | 约 24 MB |
 | 1.6.3 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.6.3/app-full-release.apk) | 约 22 MB |
@@ -36,6 +37,7 @@
 
 | 版本 | 日期 | 主要更新 |
 |------|------|----------|
+| 1.6.6 | 2026-08-16 | 修复：1.6.5 release 打开即闪退。根因是彩蛋游戏 `GameEntryProvider` 实现类误用 Kotlin `object`——`ServiceLoader` 需反射调用 public 无参构造器，而 `object` 构造器是 private 的，加载即抛 `ServiceConfigurationError: Unable to get public no-arg constructor`。已将 5 个 provider 改为普通 `class`，并补充各模块回归测试 + 文档约定说明 |
 | 1.6.5 | 2026-08-16 | 工程重构（无用户可见功能变化）：单模块 `:app` 拆分为 `core/{model,common,domain,network,data,designsystem,test-fixtures}` + `feature/{weather,settings}` + `game/{api,common,jump,star,maze,farm,home}` 的多模块体系；依赖方向铁律：`feature:*` 不互依、`game:*` 不依赖 `feature:*`、任何模块不依赖 `:app`；游戏裁剪机制升级：`-Pgames` 从源码集切换改为 `:app` 对 `:game:*` 的条件动态依赖 + ServiceLoader 装配——未选中的游戏模块不编译（无字节码），`-Pgames=none` 的 full 包比默认小约 12MB；口令常量（`#小熊跳跳` 等）集中到 `:game:api`，小熊的家枢纽经接口层切换其它游戏；修复：小熊的家游乐间改为按装配方注入的可用游戏列表动态显隐入口——`-Pgames` 裁剪时不再显示未编译的游戏按钮；工程加固：R8 保留 `GameEntryProvider` 及实现类（release 下 ServiceLoader 装配不再被剥离）；CI 增加 full release 构建与游戏注册文件断言；ktlint 覆盖扩展到全部模块；单元测试随代码迁移：测试归属对应模块（core/feature/game），CI 改为全量 `test` 覆盖所有模块；文档：README/ENGINEERING/MODULARIZATION 同步多模块结构 |
 | 1.6.4 | 2026-08-16 | 新增「小熊的家」彩蛋（搜索口令 `#小熊回家`）：客厅枢纽 + 卧室作息 / 厨房三餐图鉴 / 游乐间游戏入口 / 储物间四个房间，各房间配专属插画，游乐间按编译期启用的游戏显隐入口；三餐图鉴升级为「菜谱小书」：85 道菜（早 33 / 午 26 / 晚 26）均配菜名与一句话详细介绍（中英双语），按 中式/西式/阿拉伯/韩式/东南亚 分组浏览；三餐扩充韩式 / 东南亚菜系：早餐新增 10 道、午餐 / 晚餐各新增 10 道，含专属插画；工种扩充：新增会计、建筑师、焊工、铁匠、叉车、吊车、挖掘机、拖拉机、收割机、分拣员、记者、宇航员、运动员、药剂师、裁缝、考古学家等；城市数据扩充：补全上海市辖区与更多城市坐标，共新增 1.8 万余条；定位地名补全：逆地理失败时不再缓存占位经纬度，延迟 2.5 秒重试一次，避免地名长期停留在「当前位置」；修复：未来 24h 强降雨峰值排除降雪小时（液态水当量不再误判为强降雨）；历史区间月份 key 补零与 ISO 前缀对齐；Worker 周期任务 4xx 改为重试不终止周期链；修复：小熊的家卧室作息跨午夜时段重叠、房间内时间不刷新、图鉴切片与三餐池一致性校验 |
 | 1.6.3 | 2026-08-15 | 历史天气·区间统计重构：短区间保留逐日明细；长区间按月汇总（每行一月，点击展开当月逐日明细、再点收回），显示全区间最高温/最低温/最多降水，上限放宽到 10 年；农场·生长阶段分类插画：发芽/成长阶段按作物分类区分（花卉/谷物/水果/香草/菇菌/其他，蔬菜再细分根菜/藤蔓果菜/叶菜），替换原来全作物共用的通用图；小熊跳跳·步频调优：起步步频降低约 22% 更从容，高速段步频封顶、靠拉长步幅提速，避免 8 帧循环逼近刷新率导致抽帧/腿糊；小熊跳跳·冰墙障碍：雪天/冻雨天新增需二段跳才能通过的冰墙（单跳够不到），低分段自动降级为雪人保持前松后紧；雷暴/冰雹天雷云出现率提高至主导；摘星·结算页：新增排行榜入口，与跳跳一致可查看历史成绩；主题·动态取色（Material You）：Android 12+ 可开启跟随系统主题色；默认关闭保留品牌天空蓝配色；无障碍·减弱动画：新增开关 + 系统「移除动画」自动生效，天气场景循环动画（雨雪粒子/云漂移/太阳光芒）改静态；天气画布标记为装饰性，TalkBack 直接跳过 |
