@@ -9,6 +9,7 @@
 
 | 版本 | 文件 | 大小 |
 |------|------|------|
+| 1.6.7 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.6.7/app-full-release.apk) | 约 24 MB |
 | 1.6.6 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.6.6/app-full-release.apk) | 约 24 MB |
 | 1.6.5 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.6.5/app-full-release.apk) | 约 24 MB |
 | 1.6.4 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.6.4/app-full-release.apk) | 约 24 MB |
@@ -37,6 +38,7 @@
 
 | 版本 | 日期 | 主要更新 |
 |------|------|----------|
+| 1.6.7 | 2026-08-17 | 小熊的家：各房间布局优化——顶栏改为叠层悬浮、内容全屏铺满、插画贴顶贴边；卧室/厨房/游乐间/储物间/客厅 5 张房间主插画升级为更高清版本；修复：历史天气查询区分「网络不可用」与「该日期暂无数据」——网络/服务端错误抛错并提示可重试，只有确实无数据才显示「暂无数据」；刷新失败时优先回退上次数据并标识（离线缓存兜底），不再长时间卡加载；工程加固：OkHttp 增加整条调用 15s 超时兜底（VPN/半死连接不再卡 30-40s）；缓存读取加异常兜底避免 DataStore 异常卡死加载态；User-Agent 注入版本号；架构：新建纯资源模块 `:core:res-illustrations`，266 张 `ic_sun_bear_*` 场景插画全部收拢为单一数据源（消除 designsystem/home/app 之间重复副本），插画在 APK 中只打一份；工程加固：R8 keep 规则显式保留 `GameEntryProvider` 实现的无参构造器；CI 新增 dex 级 provider 构造器验证 + `-Pgames=none` 裁剪构建与注册清零断言；CI 超时放宽到 45 分钟；架构：`WeatherGameOverlay` 从 `:feature:weather` 上移至 `:app`（消除 feature 对 `:game:api` 的依赖）；`MainActivity` 用 `remember` 缓存 ServiceLoader 装配结果；文档：修正 README/MODULARIZATION 中「lite 零痕迹」表述——lite 不含游戏实现字节码，但保留 `:game:api` 接口契约层约 1-2KB，属预期 |
 | 1.6.6 | 2026-08-16 | 修复：1.6.5 release 打开即闪退。根因是彩蛋游戏 `GameEntryProvider` 实现类误用 Kotlin `object`——`ServiceLoader` 需反射调用 public 无参构造器，而 `object` 构造器是 private 的，加载即抛 `ServiceConfigurationError: Unable to get public no-arg constructor`。已将 5 个 provider 改为普通 `class`，并补充各模块回归测试 + 文档约定说明 |
 | 1.6.5 | 2026-08-16 | 工程重构（无用户可见功能变化）：单模块 `:app` 拆分为 `core/{model,common,domain,network,data,designsystem,test-fixtures}` + `feature/{weather,settings}` + `game/{api,common,jump,star,maze,farm,home}` 的多模块体系；依赖方向铁律：`feature:*` 不互依、`game:*` 不依赖 `feature:*`、任何模块不依赖 `:app`；游戏裁剪机制升级：`-Pgames` 从源码集切换改为 `:app` 对 `:game:*` 的条件动态依赖 + ServiceLoader 装配——未选中的游戏模块不编译（无字节码），`-Pgames=none` 的 full 包比默认小约 12MB；口令常量（`#小熊跳跳` 等）集中到 `:game:api`，小熊的家枢纽经接口层切换其它游戏；修复：小熊的家游乐间改为按装配方注入的可用游戏列表动态显隐入口——`-Pgames` 裁剪时不再显示未编译的游戏按钮；工程加固：R8 保留 `GameEntryProvider` 及实现类（release 下 ServiceLoader 装配不再被剥离）；CI 增加 full release 构建与游戏注册文件断言；ktlint 覆盖扩展到全部模块；单元测试随代码迁移：测试归属对应模块（core/feature/game），CI 改为全量 `test` 覆盖所有模块；文档：README/ENGINEERING/MODULARIZATION 同步多模块结构 |
 | 1.6.4 | 2026-08-16 | 新增「小熊的家」彩蛋（搜索口令 `#小熊回家`）：客厅枢纽 + 卧室作息 / 厨房三餐图鉴 / 游乐间游戏入口 / 储物间四个房间，各房间配专属插画，游乐间按编译期启用的游戏显隐入口；三餐图鉴升级为「菜谱小书」：85 道菜（早 33 / 午 26 / 晚 26）均配菜名与一句话详细介绍（中英双语），按 中式/西式/阿拉伯/韩式/东南亚 分组浏览；三餐扩充韩式 / 东南亚菜系：早餐新增 10 道、午餐 / 晚餐各新增 10 道，含专属插画；工种扩充：新增会计、建筑师、焊工、铁匠、叉车、吊车、挖掘机、拖拉机、收割机、分拣员、记者、宇航员、运动员、药剂师、裁缝、考古学家等；城市数据扩充：补全上海市辖区与更多城市坐标，共新增 1.8 万余条；定位地名补全：逆地理失败时不再缓存占位经纬度，延迟 2.5 秒重试一次，避免地名长期停留在「当前位置」；修复：未来 24h 强降雨峰值排除降雪小时（液态水当量不再误判为强降雨）；历史区间月份 key 补零与 ISO 前缀对齐；Worker 周期任务 4xx 改为重试不终止周期链；修复：小熊的家卧室作息跨午夜时段重叠、房间内时间不刷新、图鉴切片与三餐池一致性校验 |
