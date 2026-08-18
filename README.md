@@ -9,6 +9,7 @@
 
 | 版本 | 文件 | 大小 |
 |------|------|------|
+| 1.6.9 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.6.9/app-full-release.apk) | 约 25 MB |
 | 1.6.8 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.6.8/app-full-release.apk) | 约 24 MB |
 | 1.6.7 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.6.7/app-full-release.apk) | 约 24 MB |
 | 1.6.6 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.6.6/app-full-release.apk) | 约 24 MB |
@@ -39,6 +40,7 @@
 
 | 版本 | 日期 | 主要更新 |
 |------|------|----------|
+| 1.6.9 | 2026-08-18 | 周末生活片刻：周末白天玩乐合并为大池并语义化命名；旅行池扩充东京/纽约/巴黎/首尔/港台鲁苏等地标场景；周末旅行时段改为 09:00–11:30 与 12:30–15:00；工种扩充：卡车司机、街头小吃、前台、理货、诸城烧肉、烤鱼、码头等；小熊的家：客厅窗景热区进入阳台观景，随实时天气切换天空与粒子；雨景特效：跳跳/摘星/迷宫共用雨层增强摆动与水花 |
 | 1.6.8 | 2026-08-17 | 通勤生活片刻：新增电瓶车 / 自行车 / 轮渡上下班插画与文案，通勤方式从 5 种扩到 8 种（按日轮换，上下班同一天同交通方式）；工程：新增应用级性能监控（冷启动 / 网络请求 / 内存），仅 Debug 构建启用，Release 包零开销；OkHttp 经 PerformanceInterceptor 自动记录请求耗时；修复：小熊的家厨房横幅负 padding 导致 Compose 运行时崩溃（进厨房第一帧即抛 IllegalArgumentException） |
 | 1.6.7 | 2026-08-17 | 小熊的家：各房间布局优化——顶栏改为叠层悬浮、内容全屏铺满、插画贴顶贴边；卧室/厨房/游乐间/储物间/客厅 5 张房间主插画升级为更高清版本；修复：历史天气查询区分「网络不可用」与「该日期暂无数据」——网络/服务端错误抛错并提示可重试，只有确实无数据才显示「暂无数据」；刷新失败时优先回退上次数据并标识（离线缓存兜底），不再长时间卡加载；工程加固：OkHttp 增加整条调用 15s 超时兜底（VPN/半死连接不再卡 30-40s）；缓存读取加异常兜底避免 DataStore 异常卡死加载态；User-Agent 注入版本号；架构：新建纯资源模块 `:core:res-illustrations`，266 张 `ic_sun_bear_*` 场景插画全部收拢为单一数据源（消除 designsystem/home/app 之间重复副本），插画在 APK 中只打一份；工程加固：R8 keep 规则显式保留 `GameEntryProvider` 实现的无参构造器；CI 新增 dex 级 provider 构造器验证 + `-Pgames=none` 裁剪构建与注册清零断言；CI 超时放宽到 45 分钟；架构：`WeatherGameOverlay` 从 `:feature:weather` 上移至 `:app`（消除 feature 对 `:game:api` 的依赖）；`MainActivity` 用 `remember` 缓存 ServiceLoader 装配结果；文档：修正 README/MODULARIZATION 中「lite 零痕迹」表述——lite 不含游戏实现字节码，但保留 `:game:api` 接口契约层约 1-2KB，属预期 |
 | 1.6.6 | 2026-08-16 | 修复：1.6.5 release 打开即闪退。根因是彩蛋游戏 `GameEntryProvider` 实现类误用 Kotlin `object`——`ServiceLoader` 需反射调用 public 无参构造器，而 `object` 构造器是 private 的，加载即抛 `ServiceConfigurationError: Unable to get public no-arg constructor`。已将 5 个 provider 改为普通 `class`，并补充各模块回归测试 + 文档约定说明 |
