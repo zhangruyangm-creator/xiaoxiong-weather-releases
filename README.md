@@ -9,6 +9,7 @@
 
 | 版本 | 文件 | 大小 |
 |------|------|------|
+| 1.7.2 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.7.2/app-full-release.apk) | 约 26 MB |
 | 1.7.1 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.7.1/app-full-release.apk) | 约 26 MB |
 | 1.7.0 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.7.0/app-full-release.apk) | 约 26 MB |
 | 1.6.9 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.6.9/app-full-release.apk) | 约 25 MB |
@@ -42,6 +43,7 @@
 
 | 版本 | 日期 | 主要更新 |
 |------|------|----------|
+| 1.7.2 | 2026-08-21 | 迷宫/跳跳/摘星三款游戏 Tier B 引擎层分离：物理与生成规则抽为纯 Kotlin 逻辑层，配合差分回归测试保证重构前后帧级等价；迷宫：修复无尽存档坐标越界导致的崩溃（越界会话直接丢弃）；迷宫：修复放弃无尽对局后进度被 onDispose 重新写回"复活"的问题；新增 6 篇技术说明：性能监控与零开销设计、跳跳 2D 物理引擎、摘星程序化平台与跳跃物理、天气数据管线与物候映射、网络层拦截器缓存与离线降级、多模块架构与手动依赖注入 |
 | 1.7.1 | 2026-08-20 | SunPathMath 拆分为 SunPath / SunPathBearMoment / SunPathBearDrawables，每日变体索引哈希修复（31 变体时周期性撞位）；小熊的家：阳台天气分类统合到共用农场天气口径（修复阵雨 80/81/82 被误判为雪）；小熊的家：远景灯光取模防负数、远景建筑列表提为常量、动画时钟改 Double 累计；小熊的家：作息以凌晨 5:00 为日界，修复凌晨 0-5 点全天误标"已完成"；小熊的家：天气概况复用统一分类，修复大雨码 65 显示为"多云"；通知：RAIN_SOON 分支不再污染普通通知去重状态；WeatherScreen 分享面板改为 LaunchedEffect 关闭，避免组合期写状态；DebugWeatherStore 覆盖当前小时桶（替代硬编码 hourly[0]）；清理 jump/maze/star 中 frame 死代码；新增芝加哥周末探索 / 牛奶配送工作插画 |
 | 1.7.0 | 2026-08-19 | 周末探索新增 11 张插画：札幌、上海南京东路、深圳宝安中心、深圳湾公园、济南唐冶、西安骡马市、北京前门、厦门鼓浪屿、重庆洪崖洞、里约热内卢、黄石公园；工作池新增 6 张插画：石油工人、臭豆腐摊、手机维修、铁板烤肠、钳工、车床操作工；小熊的家新增"今天小结"页面：天气概况卡片 + 今日作息时间线；修复客厅热区点击误跳阳台的问题；修复阳台城市剪影在阴天不可见、天气类型兜底逻辑 |
 | 1.6.9 | 2026-08-18 | 周末生活片刻：周末白天玩乐合并为大池并语义化命名；旅行池扩充东京/纽约/巴黎/首尔/港台鲁苏等地标场景；周末旅行时段改为 09:00–11:30 与 12:30–15:00；工种扩充：卡车司机、街头小吃、前台、理货、诸城烧肉、烤鱼、码头等；小熊的家：客厅窗景热区进入阳台观景，随实时天气切换天空与粒子；雨景特效：跳跳/摘星/迷宫共用雨层增强摆动与水花 |
