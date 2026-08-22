@@ -9,6 +9,7 @@
 
 | 版本 | 文件 | 大小 |
 |------|------|------|
+| 1.7.5 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.7.5/app-full-release.apk) | 约 27 MB |
 | 1.7.4 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.7.4/app-full-release.apk) | 约 26 MB |
 | 1.7.3 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.7.3/app-full-release.apk) | 约 26 MB |
 | 1.7.1 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.7.1/app-full-release.apk) | 约 26 MB |
@@ -44,6 +45,7 @@
 
 | 版本 | 日期 | 主要更新 |
 |------|------|----------|
+| 1.7.5 | 2026-08-22 | **修复**：同步小熊回家卧室作息时间表与天气页太阳弧时段（周末旅行拆为上午/下午两段，下午玩乐从15:00开始），消除「今日作息」显示12:30–18:00连续逛逛的不一致；新增插画：阳台主题（6张）、客厅全景（8张）、下午茶（8张）、周末归途（9张）、周末游玩（2张） |
 | 1.7.4 | 2026-08-21 | **新游戏**：小熊接雨雪——底部左右移动接住雨滴/雪花/硬币/花瓣、躲开乌云/冰雹/闪电，掉落物与节奏随真实天气变化（雨/雪/雷暴/冻雨/冰雹各有专属掉落组合）；含受击无敌帧、挤压/粒子/震屏反馈、排行榜与最高分，经口令 `#小熊接雨雪` 进入，支持 `-Pgames` 按需裁剪；作息轨迹：工作日新增「晨间逛逛」时段（晨练后至早餐前），轨道插画与周末旅行共用探索插画池；作息轨迹：晨练结束点随真实日出动态化（日出后 45 分钟封顶 06:30），天气页把当日日出传入太阳弧；探索插画池扩展至 46 城：新增深圳湾/东门/华强北/欢乐港湾/欢乐海岸/海岸城/大唐不夜城/静安/徐家汇/衡山路/锦江/九寨沟/外滩/陆家嘴/孟买待 15 张城市插画；工作场景新增「烤羊肉串」 |
 | 1.7.3 | 2026-08-21 | **修复（1.7.2 严重问题）**：摘星/跳跳/迷宫三款游戏的帧循环刷新订阅此前被误删，导致摘星画面停滞、跳跳/摘星顶部实时分数不随进度刷新；已全部恢复每帧重绘订阅；迷宫/跳跳/摘星三款游戏 Tier B 引擎层分离：物理与生成规则抽为纯 Kotlin 逻辑层，配合差分回归测试保证重构前后帧级等价；迷宫：修复无尽存档坐标越界导致的崩溃（越界会话直接丢弃）；迷宫：修复放弃无尽对局后进度被 onDispose 重新写回"复活"的问题；新增 6 篇技术说明：性能监控与零开销设计、跳跳 2D 物理引擎、摘星程序化平台与跳跃物理、天气数据管线与物候映射、网络层拦截器缓存与离线降级、多模块架构与手动依赖注入；小熊的家：阳台点击区域下移，使其标签大致落在「小熊的家」标题与「客厅」标签的中线附近，不再贴顶；小熊的家：作息提示文案去重（原「小熊现在在小熊晨练呼啦圈」改为「现在晨练呼啦圈」）
 | 1.7.1 | 2026-08-20 | SunPathMath 拆分为 SunPath / SunPathBearMoment / SunPathBearDrawables，每日变体索引哈希修复（31 变体时周期性撞位）；小熊的家：阳台天气分类统合到共用农场天气口径（修复阵雨 80/81/82 被误判为雪）；小熊的家：远景灯光取模防负数、远景建筑列表提为常量、动画时钟改 Double 累计；小熊的家：作息以凌晨 5:00 为日界，修复凌晨 0-5 点全天误标"已完成"；小熊的家：天气概况复用统一分类，修复大雨码 65 显示为"多云"；通知：RAIN_SOON 分支不再污染普通通知去重状态；WeatherScreen 分享面板改为 LaunchedEffect 关闭，避免组合期写状态；DebugWeatherStore 覆盖当前小时桶（替代硬编码 hourly[0]）；清理 jump/maze/star 中 frame 死代码；新增芝加哥周末探索 / 牛奶配送工作插画 |
