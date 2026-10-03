@@ -9,6 +9,7 @@
 
 | 版本 | 文件 | 大小 |
 |------|------|------|
+| 1.18.1 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.18.1/app-full-release.apk) | 约 27 MB |
 | 1.18.0 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.18.0/app-full-release.apk) | 约 27 MB |
 | 1.17.0 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.17.0/app-full-release.apk) | 约 27 MB |
 | 1.16.2 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.16.2/app-full-release.apk) | 约 27 MB |
@@ -75,6 +76,7 @@
 
 | 版本 | 日期 | 主要更新 |
 |------|------|----------|
+| 1.18.1 | 2026-10-04 | **小熊方块**（原「小熊雨幕」）：玩法改为四列「别踩白块儿」，口令 `#小熊方块`（`#小熊雨幕` 仍可用）。黑块分三种——普通、带小熊脸（点中有星屑特效）、露双耳需连点两次；漏接或点白立刻结束。见 `docs/工程决策.md`；**`:game:rain` 清理**：删除已下线的旧雨幕引擎（`RainFall` / `RainRender` / `RainConfig`）及对应单测，避免与 `RainTiles` 并存误导 CI；保留 `RainTilesTest` / 入口测试；**小熊方块开局**：未开滚前点白块不再直接判负，仅轻反馈；点中第一块黑块后进入正常规则。READY 文案说明「先停再滚」；**小熊战机**：READY 可选拖动或左下虚拟方向键，偏好 `plane_control` 持久化；暂停/换模式时清零轴向，避免飞机漂移；**说明**：GitHub 上 `v1.18.0` APK 曾误发为仅删除雨幕模块的提交；**请以 `v1.18.1` 为准** |
 | 1.18.0 | 2026-10-03 | **移除「小熊雨幕」**（1.16.0 引入、1.16.1/1.16.2/1.17.0 修过三次仍不可玩）：删除 `:game:rain` 模块、口令 `#小熊雨幕` 与相关文档；游戏模块回到 8 个。教训记录在 `docs/工程决策.md` |
 | 1.17.0 | 2026-10-03 | **今天页不再重复花期时令**：七日页已有完整时令卡片，去掉今天页 teaser（含跳转入口与卡片布局项）；旧偏好里的 `SEASON` 会被忽略；**小熊跳跳去掉围巾涂装**：不再在精灵上叠色块，READY 页不再选围巾色；删除局外 Meta；**小熊农场顶栏**：去掉占位过大的金币玻璃面板，「小熊农场」单独一行横排，金币与商店/图鉴/背包放下一行，不再把标题挤成竖排或挡住；**小熊战机**：受击无敌随难度缩短（休闲 75 / 标准 45 / 挑战 30 tick），标准与挑战不再沿用偏长的固定无敌；**小熊雨幕**：补上返回键与 READY「回到天气」；本玩法漏接即结束，不再把进度写进公共 prefs 顶层键；出怪间距按最小间距卡住，卡顿补出按预定时刻排开，避免窗内两块叠在一起；**太阳轨迹插画**：工作池新增加油站工作人员；**隐私政策**：更新至 1.17.0（本地游戏数据说明与当前存档项对齐，去掉已下线的涂装/Meta 表述） |
 | 1.16.2 | 2026-10-03 | **修复「小熊雨幕」小熊不显示**：底部小熊条的 `Canvas` 只写了 `fillMaxWidth()` 而无高度，`Canvas` 无内在尺寸会被量成 0 高度，角色因此完全不渲染。现给出显式高度常量 `RAIN_BEAR_STRIP_HEIGHT`；**雨幕渲染加固**：背景雨丝改用正取模（`%` 在负值下会给出负余数，雨丝会画到屏幕外）；`activeTiles()` 每帧只取一次而非两次；补 `rainCanvasY` 与正取模的单元测试；承接 1.16.1：1.16.1 修掉了"方块绘制在屏幕顶端不下落"的致命缺陷，本版本继续清理同一绘制路径上剩余的量纲与尺寸问题 |
