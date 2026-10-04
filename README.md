@@ -9,6 +9,7 @@
 
 | 版本 | 文件 | 大小 |
 |------|------|------|
+| 1.19.1 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.19.1/app-full-release.apk) | 约 27 MB |
 | 1.19.0 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.19.0/app-full-release.apk) | 约 27 MB |
 | 1.18.1 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.18.1/app-full-release.apk) | 约 27 MB |
 | 1.18.0 | [app-full-release.apk](https://github.com/zhangruyangm-creator/xiaoxiong-weather-releases/releases/download/v1.18.0/app-full-release.apk) | 约 27 MB |
@@ -77,6 +78,7 @@
 
 | 版本 | 日期 | 主要更新 |
 |------|------|----------|
+| 1.19.1 | 2026-10-04 | **小熊黑白棋**：全屏桌布背景（不再透出天气页）；无合法落子时自动过手并提示；棋盘木框/绒面/立体棋子与可下「幽灵子」提示（`ReversiBoardArt`） |
 | 1.19.0 | 2026-10-04 | **小熊白块**（原「小熊方块」）：主口令 `#小熊白块`；`#小熊方块`、`#小熊雨幕` 仍可用。READY 可选 **2 / 3 / 4 列**；双连点块与单点块视觉区分（虚线框、双点提示）；开局后 READY 卡片会正常收起；滚前点白块不判负；**新增「小熊黑白棋」**（口令 `#小熊黑白棋`）：8×8 奥赛罗，你执黑 vs 小熊 AI；READY 可选 **7 档** AI（入门～宗师，minimax 深度递增）；排行榜与局外最佳分；**工程**：接入 `:game:reversi`（ServiceLoader / `-Pgames` / R8 校验）；游戏模块 10 个 |
 | 1.18.1 | 2026-10-04 | **小熊方块**（原「小熊雨幕」）：玩法改为四列「别踩白块儿」，口令 `#小熊方块`（`#小熊雨幕` 仍可用）。黑块分三种——普通、带小熊脸（点中有星屑特效）、露双耳需连点两次；漏接或点白立刻结束。见 `docs/工程决策.md`；**`:game:rain` 清理**：删除已下线的旧雨幕引擎（`RainFall` / `RainRender` / `RainConfig`）及对应单测，避免与 `RainTiles` 并存误导 CI；保留 `RainTilesTest` / 入口测试；**小熊方块开局**：未开滚前点白块不再直接判负，仅轻反馈；点中第一块黑块后进入正常规则。READY 文案说明「先停再滚」；**小熊战机**：READY 可选拖动或左下虚拟方向键，偏好 `plane_control` 持久化；暂停/换模式时清零轴向，避免飞机漂移；**说明**：GitHub 上 `v1.18.0` APK 曾误发为仅删除雨幕模块的提交；**请以 `v1.18.1` 为准** |
 | 1.18.0 | 2026-10-03 | **移除「小熊雨幕」**（1.16.0 引入、1.16.1/1.16.2/1.17.0 修过三次仍不可玩）：删除 `:game:rain` 模块、口令 `#小熊雨幕` 与相关文档；游戏模块回到 8 个。教训记录在 `docs/工程决策.md` |
